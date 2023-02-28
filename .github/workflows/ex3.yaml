@@ -5,6 +5,9 @@ on:
 jobs:
   run-npm-test:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 14
+
     steps:
         - name: checkout
           uses: actions/checkout@v3
