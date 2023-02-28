@@ -5,5 +5,23 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    steps: 
-      # TO COMPLETE  
+    steps:       
+       - name: Checkout Repo
+         uses: actions/checkout@v3
+       - name: Install Node
+         uses: actions/setup-node@v3
+         with:
+          node-version: 'lts/*'
+         run: npm install 
+    
+  job2:
+    need: job1
+    runs-on: ubuntu-latest
+    steps:       
+       - name: Checkout Repo
+         uses: actions/checkout@v3
+       - name: Install Node
+         uses: actions/setup-node@v3
+         with:
+          node-version: 'lts/*'
+         run: npm test 
