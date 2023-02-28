@@ -4,4 +4,4 @@ on:
 
 jobs:
  call-workflow-1-in-local-repo:
-    uses: ./.github/workflows/ex2.yml
+    uses: ./.github/workflows/ex1.yml
